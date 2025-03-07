@@ -1,0 +1,42 @@
+
+<header class="stui-header__top clearfix" id="header-top">
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <div class="navbar-toggle navbar-navmore" data-toggle="collapse" data-target="#example-navbar-collapse"><i class="icon iconfont">&#xe641;</i></div>
+                    <div class="navbar-toggle navbar-search" title="搜索"><i class="icon iconfont">&#xe78d;</i></div>
+                    <a  href="/"><img src="/template/film/picture/logo.png" alt="{mv:name}" height="33" width="120" /></a>
+                </div>
+                <div class="user-search hidden-md hidden-lg">
+                    <div class="nav-search">
+                        <div class="zanpian_search">
+                            <input class="form-control zanpian_wd" placeholder="输入影片关键词11..." name="wd1" id="wd1"  value="" type="text">
+                            <button type="button" class="btn btn-search" id="searchbar1"><i class="icon iconfont">&#xe642;</i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        {mv:menu}
+                        <li class="dropdown hidden-xs"><a class="more" id="dropdownMenu1" data-toggle="dropdown">更多<i class="icon iconfont"></i></a>
+                            <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="/rank/0.html" title="排行榜">榜单</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="/last.html" title="最新影片">最新</a></li>
+                            </ul></li>
+                        <li id="nav-top" class=" hidden-sm hidden-md hidden-lg"><a href="/rank/0.html" title="电影电视剧排行榜">榜单</a></li>
+                        <li id="nav-last" class=" hidden-sm hidden-md hidden-lg"><a href="/last.html" title="最新影片">最新</a></li>
+                    </ul>
+                    <div class="nav-search  visible-md visible-lg">
+                        <div class="zanpian_search">
+                            <input class="form-control zanpian_wd" placeholder="输入影片关键词..." name="wd2" id="wd2" required="" type="text">
+                            <button type="button" class="btn btn-search" id="searchbar2">
+                                <i class="icon iconfont">&#xe642;</i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>

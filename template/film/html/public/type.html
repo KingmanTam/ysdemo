@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="list-mcat clearfix">
+      <div class="content-menu clearfix">
+        <div class="item collapse list_type" id="collapse">
+          <ul class="clearfix">
+            <li class="text">
+              <span class="text-muted">按类型</span>
+            </li>
+            {mv:show_class}
+          </ul>
+
+          <ul class="clearfix">
+            <li class="text">
+              <span class="text-muted">按地区</span>
+            </li>
+            {mv:show_area}
+          </ul>
+          <ul class="clearfix">
+            <li class="text">
+              <span class="text-muted">按时间</span>
+            </li>
+            {mv:show_year}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="layout-box clearfix">
+      <div class="box-switch-tabs active clearfix">
+        <span class="text-muted pull-right hidden-xs" id="count">共有
+              <span class="text-color">{mv:data-total}</span>个影片,当前第
+              <span class="text-color">{mv:page-now}</span>页</span>
+        <ul class="nav nav-tabs ajax-nav-tabs">
+          <li class="active">
+            <a href="" class='on' data="order-addtime">按时间</a></li>
+          <li>
+            <a href="" class='on' data="order-hits">按人气</a></li>
+          <li>
+            <a href="" class='on' data="order-gold">按评分</a></li>
+        </ul>
+      </div>
+      <div class="box-video-list">
+        <div class="item">
+          <ul class="clearfix" id="content">
+            {mv:dataList}
+          </ul>
+        </div>
+      </div>
+      {mv:pages}
+    </div>
+  </div>
+</div>

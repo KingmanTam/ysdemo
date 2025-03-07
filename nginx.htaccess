@@ -1,0 +1,5 @@
+ if (!-e $request_filename) {
+        rewrite ^/index.php(.*)$ /index.php?m=$1 last;
+        rewrite ^(.*)$ /index.php?m=$1 last;
+        break;
+   }

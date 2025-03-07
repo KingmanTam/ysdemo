@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="layout-box clearfix">
+      <div class="box-switch-tabs active clearfix">
+        <span class="text-muted pull-right hidden-xs" id="count">共有<span class="text-color">“<strong style="color:#4c8fe8" class="mac_total"></strong>{mv:total}</span>位明星,当前第<span class="text-color">“<strong style="color:#4c8fe8" class="mac_page"></strong>{mv:page_num}</span>页</span>
+        <ul class="nav nav-tabs ajax-nav-tabs">
+          <li class="active"><a href="/" data="order-addtime">找到的明星</a></li>
+        </ul>
+      </div>
+      <div class="box-video-list">
+        <div class="item">
+          <ul class="clearfix" id="content">
+            {mv:actor_list}
+          </ul>
+        </div>
+      </div>
+      {mv:pages}
+    </div>
+  </div>
+</div>

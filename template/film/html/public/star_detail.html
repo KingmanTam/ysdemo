@@ -1,0 +1,85 @@
+<div class="container  star_hot_box">
+  <div class="row">
+
+    <div>
+      <div class="details-nav">
+        <ul>
+          <li ><a href="/star/index_{mv:actor_id}.html" title="{mv:actor_name}简介"><span class="hidden-xs">明星</span>简介</a></li>
+          <li class="active"><a href="/star/detail_{mv:actor_id}.html" title="{mv:actor_name}详细资料"><span class="hidden-xs">详细</span>资料</a></li>
+          <li><a href="/star/works_{mv:actor_id}_1.html" title="{mv:actor_name}全部作品"><span class="hidden-xs">全部</span>作品</a></li>
+        </ul>
+      </div>
+      <div class="layout-box clearfix p-0 mt-0">
+        <div class="col-md-9 col-sm-9 col-xs-12">
+          <div class="col-md-3 col-sm-3 col-xs-4 clearfix">
+            <div class="details-pic">
+              <div class="video-pic" style="background: url({mv:actor_pic}) no-repeat top center;background-size:cover;">
+                <div id="flower" data-id="{mv:actor_id}" data-sid="2"><span class="flower hover"></span><span class="fnum" id="flower-count">{mv:actor_up}</span></div>
+              </div>
+              <div class="details-tool" id="updown">
+                <div class="vod-sect"><a rel="nofollow" data-id="{mv:actor_id}" data-mid="2" data-type="up" href="javascript:;"><i class="iconfont hidden-xs">&#xe607;</i>{mv:actor_up}</a></div>
+                <div class="vod-rss"><a rel="nofollow" data-id="{mv:actor_id}" data-mid="2" data-type="down" href="javascript:;"><i class="iconfont hidden-xs">&#xe606;</i>{mv:actor_down}</a></div>
+                <a rel="nofollow" class="b-l hidden-xs" id="qrcode" data-toggle="popover" data-trigger="hover" data-placement="top" data-container="body" data-title="手机浏览请扫瞄二维码" href="javascript:void(0);"><i class="iconfont">&#xe62d;</i>手机</a> </div>
+            </div>
+          </div>
+          <div class="col-md-9 col-sm-9 col-xs-8 clearfix p-0">
+            <div class="details-info p-0" style="width:100%">
+              <h1>{mv:actor_name}<em class="hidden-sm hidden-md hidden-lg">{mv:actor_alias}</em></h1>
+              <ul class="info clearfix">
+                <li class="col-md-12 col-sm-12 col-xs-12  pt-0 hidden-sm hidden-md hidden-lg text-overflow"><span> {mv:actor_sex}/ {mv:actor_area} / {mv:actor_remarks}</span></li>
+                <li class="col-md-12 col-sm-12 col-xs-12 pt-0 hidden-sm hidden-md hidden-lg text-overflow"><span> 身高 {mv:actor_height}  /  体重 {mv:actor_weight}  /   星座  {mv:actor_starsign}</span></li>
+                <li class="col-md-12 col-sm-12 col-xs-12 hidden-sm hidden-md hidden-lg text-overflow pt-0"><span> 血型 / {mv:actor_blood} / {mv:actor_birtharea} / {mv:actor_birthday}</span></li>
+                <li class="col-md-12 col-sm-12 col-xs-12 pt-0 pb-0 hidden-sm hidden-md hidden-lg"><span class="hidden-xs">详细介绍：</span><span>{mv:actor_name},{mv:actor_en},{mv:actor_area},{mv:actor_sex}{mv:actor_remarks},出生于{mv:actor_birtharea}。</span>  </li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"><span>别名：</span>{mv:actor_alias}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>拼音名：</span>{mv:actor_en}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>性别：</span>{mv:actor_sex}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>国籍：</span>{mv:actor_area}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>身高：</span>{mv:actor_height}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>体重：</span>{mv:actor_weight}</li>
+
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>星座：</span>{mv:actor_starsign}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>血型：</span>{mv:actor_blood}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>出生日期：</span>{mv:actor_birthday}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>出生地区：</span>{mv:actor_birtharea}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>职业：</span>{mv:actor_remarks}</li>
+                <li class="col-md-6 col-sm-6 col-xs-12 text hidden-xs"> <span>毕业院校：</span>{mv:actor_school}</li>
+                <li class="col-md-12 col-sm-12 col-xs-12 pt-0 hidden-xs"><span>明星/评论：</span><a rel="nofollow" href="#zanpian-cm">我要评论<i class="iconfont">&#xe632;</i></a></li>
+                <li></li>
+                <li class="col-md-12 col-sm-12 col-xs-12 pt-0 pb-0 hidden-xs"><span class="hidden-xs">详细介绍：</span> <span class="details-content-default">{mv:actor_blurb}</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-3 hidden-sm hidden-xs">
+          <div class="box-title">
+            <h3 class="m-0">荧幕热星</h3>
+            <div class="more pull-right"><a href="{$vo|mac_url_actor_index}" title="{$vo.vod_name}" class="text-muted">更多 <i class="icon iconfont">&#xe65e;</i></a></div>
+            <ul class="box-star-list" >
+              {mv:hot_star}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="layout-box clearfix">
+      <div class="col-md-12 col-sm-12 col-xs-12 p-0">
+        <div class="box-title" id="zuoping">
+          <h3 class="m-0">{mv:actor_name}详细资料</h3>
+        </div>
+        <div class="box-video-list">
+          <div class="item">
+            {mv:star_content}
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>

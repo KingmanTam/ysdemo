@@ -1,0 +1,109 @@
+<div class="container">
+  <div class="row">
+    <div class="layout-box clearfix p-0 m-0">
+      <div class="col-md-9 col-sm-12 col-xs-12 player_left">
+        <div class="player_title"><h1>{mv:vod_name}</h1></div>
+        <div id="zanpiancms_player">
+          <div class="embed-responsive embed-responsive-16by9" id="cms_play">
+            <iframe className="zanpiancms-play-iframe" src="{mv:play_url_now}" width="100%" height="100%"
+                    frameBorder="0" scrolling="no" allowFullScreen="true"></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 box-main-side hidden-sm hidden-xs hidden-sm player_right">
+        <div class="box-switch-tabs" id="myTab">
+          <ul class="nav nav-tabs ajax-nav-tabs">
+            <li class="active"><a href="#con_news_1" data-toggle="tab">相关内容</a></li>
+            <li><a href="#con_news_2" data-toggle="tab">今日热点</a></li>
+          </ul>
+        </div>
+        <ul class="tab clearfix mg-0 p-0 fade in active" id="con_news_1">
+          {mv:hot_1}
+        </ul>
+        <ul class="tab clearfix mg-0 p-0  fade" id="con_news_2">
+          {mv:hot_2}
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-9 col-sm-12 box-main-content" style="position:static">
+      <div class="layout-box clearfix">
+        <div class="news_details">
+          <div class="news_top text-center text-overflow">
+            <span>时间：{mv:vod_time}</span><span>播放：<span id="detail-hits"
+                                                                  data-type="news_hits">{mv:vod_hits}</span>次</span><span
+                  class="hidden-xs">来源：<a href="film.com" target="_blank">{mv:domain_name}</a></span>
+          </div>
+        </div>
+        <div class="star-info-min col-md-12 col-sm-12 col-xs-12 clearfix news-box-txt p-0">
+          <div class="col-md-2 col-sm-3 col-xs-3 news-box-txt-l"><a class="video-pic loading"
+                                                                    href="/star/index_{mv:actor_id}.html" title="{mv:actor_name}"
+                                                                    data-original="{mv:actor_pic}"><span
+                  class="note text-bg-c">{mv:actor_name}</span></a></div>
+          <div class="col-md-10 col-sm-9 col-xs-9">
+            <div class="news-info">
+              <div class="actor-role-top"><strong><a class="text-color" href="/star/index_{mv:actor_id}.html"
+                                                     target="_blank">{mv:actor_name}</a></strong>
+                <div class="more pull-right hidden-xs"><a href="/star/index_{mv:actor_id}.html"
+                                                          class="text-muted" title="详细">详细 <i
+                        class="icon iconfont">&#xe65e;</i></a></div>
+              </div>
+              <div class="details-info p-0" style="width:100%">
+                <ul class="info clearfix">
+                  <li class="col-md-12 col-sm-12 col-xs-12 pg-0 hidden-sm hidden-md hidden-lg text-overflow">
+                    <span>{mv:actor_name} /  / {mv:actor_remarks}</span></li>
+                  <li class="col-md-12 col-sm-12 col-xs-12 p-0 hidden-sm hidden-md hidden-lg text-overflow">
+                    <span>{mv:actor_area}/  /{mv:actor_height} </span>
+                  </li>
+                  <li class="col-md-6 col-sm-6 col-xs-6 pg-0 hidden-xs"><span>中文名：</span>{mv:actor_name}</li>
+                  <li class="col-md-6 col-sm-6 col-xs-6 pg-0 hidden-xs"><span>别名：</span>{mv:actor_alias}</li>
+                  <li class="col-md-6 col-sm-6 col-xs-6 pg-0 hidden-xs"><span>身高：</span>{mv:actor_height}</li>
+                  <li class="col-md-6 col-sm-6 col-xs-6 pg-0 hidden-xs"><span>体重：</span>{mv:actor_weight}</li>
+                  <li class="col-md-6 col-sm-6 col-xs-6 pg-0 hidden-xs"><span>国籍：</span>{mv:actor_area}</li>
+                  <li class="col-md-6 col-sm-6 col-xs-6 pg-0 hidden-xs"><span>星座：</span>{mv:actor_starsign}</li>
+                  <li class="col-md-12 col-sm-12 col-xs-12 pg-0 text-overflow"><span
+                          class="hidden-xs">详细介绍：</span>暂时没有相关信息！
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="details-content text-justify"><p></p></div>
+        <div class="clearfix"></div>
+        <div class="details-page clearfix">
+          <ul class="clearfix">
+            <li class="col-md-6"><a class="text-overflow" href="/newsd/{mv:pre_link}.html" target="_self">上一篇</a>
+            </li>
+            <li class="col-md-6"><a class="text-overflow" href="/newsd/{mv:next_link}.html" target="_self">下一篇</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="layout-box clearfix">
+        <div class="box-title"><h3 class="m-0">强力推荐</h3></div>
+        <div class="clearfix">
+          <ul class="clearfix">
+            {mv:recommend}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+    <div class="col-md-3 col-sm-12 box-main-side hidden-sm hidden-xs">
+      <div class="layout-box clearfix">
+        <div class="box-title " style="padding:0px 0px 10px 0">
+          <h3 class="m-0">
+            <i class="icon iconfont text-color"></i>热门视频</h3></div>
+        <div class="box-video-text-list">
+          <div class="col-md-6 col-sm-12 col-xs-12 p-0">
+            {mv:top_first}
+            <ul class="clearfix mg-0">
+              {mv:top_list}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

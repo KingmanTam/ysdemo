@@ -1,0 +1,45 @@
+<div class="container  star_hot_box">
+  <div class="row">
+
+    <div>
+      <div class="details-nav">
+        <ul>
+          <li><a href="/star/index_{mv:actor_id}.html" title="{mv:actor_name}简介"><span class="hidden-xs">明星</span>简介</a></li>
+          <li><a href="/star/detail_{mv:actor_id}.html" title="{mv:actor_name}详细资料"><span class="hidden-xs">详细</span>资料</a></li>
+          <li class="active"><a href="/star/works_{mv:actor_id}_1.html" title="{mv:actor_name}全部作品"><span class="hidden-xs">全部</span>作品</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="layout-box clearfix">
+      <div class="col-md-12 col-sm-12 col-xs-12 p-0">
+        <div class="box-switch-tabs active clearfix">
+        <span class="text-muted pull-right hidden-xs" id="count">共有
+              <span class="text-color">{mv:data-total}</span>个影片,当前第
+              <span class="text-color">{mv:page-now}</span>页</span>
+          <ul class="nav nav-tabs ajax-nav-tabs">
+            <li class="active">
+              <span class="text-color">{mv:actor_name}</span>全部作品
+            <li>
+          </ul>
+        </div>
+        <div class="box-video-list">
+          <div class="item">
+            <ul class="clearfix" id="content">
+              {mv:star_zp_list}
+            </ul>
+          </div>
+        </div>
+        {mv:pages}
+      </div>
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="row">
+    <!--左侧板块开始-->
+    <div class="details-nav">
+      <ul>
+        <li >
+          <a  href="{mv:detail_link}"><span class="hidden-xs">视频</span>详细</a>
+        </li>
+        <li> <a href="/story/all_{mv:vod_id}.html" title="剧情">剧情</a></li>
+        <li> <a href="/info/theme_{mv:vod_id}.html" title="主题海报">主题海报</a></li>
+        <li class="active"> <a href="/info/trailer_{mv:vod_id}.html" title="上映预告">上映预告</a></li>
+      </ul>
+    </div>
+
+    <div class="col-md-9 col-sm-12 box-main-content" style="position:static" id="play">
+
+
+      <div class="layout-box clearfix mt-0">
+        <div class="details-title text-center"><h1 class="m-0">{mv:vod_name}预告</h1></div>
+        <span class="pull-right btn btn-xs btn-success top" ><i class="icon iconfont text-color"></i>播放预告片</span>
+      </div>
+
+      <div class="clearfix text-center details-tv">
+        <div class="item"><h4 class="text-overflow text-center">{mv:vod_year}年敬请关注！</h4></div>
+        <div class="details-content text-justify"><p>简介：</p>
+          <p>{mv:vod_name}由{mv:vod_director}导演，{mv:vod_actor}主演的{mv:vod_class}片，于{mv:vod_year}上映，敬请期待！</p>…<p></p></div>
+        <div class="col-md-12 col-sm-12 box-main-content"></div>
+      </div>
+
+      <!--视频新闻结束-->
+      <div class="layout-box clearfix">
+        <div class="box-title">
+          <h3 class="m-0">类似推荐</h3>
+        </div>
+        <div class="item">
+          <ul class="clearfix" id="content">
+            {mv:recommend}
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-3 col-sm-12 box-main-side hidden-sm hidden-xs">
+      <div class="layout-box clearfix">
+        <div class="box-title " style="padding:0px 0px 10px 0">
+          <h3 class="m-0">
+            <i class="icon iconfont text-color"></i>热门视频</h3></div>
+        <div class="box-video-text-list">
+          <div class="col-md-6 col-sm-12 col-xs-12 p-0">
+            {mv:top_first}
+            <ul class="clearfix mg-0">
+              {mv:top_list}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
