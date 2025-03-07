@@ -1,0 +1,123 @@
+<div class="container">
+  <div class="row">
+
+    <div class="layout-box clearfix p-0 m-0">
+      <div class="col-md-9 col-sm-12 col-xs-12 player_left">
+        <div class="player_title">
+          <div class="play_nav hidden-xs">正在播放：
+            <a href="/" title="首页">首页</a>
+            <i class="icon iconfont">&#xe65e;</i>
+            <a href="/{mv:type_url}/" title="{mv:type_name}">{mv:type_name}</a>
+            <i class="icon iconfont">&#xe65e;</i>
+            <a title="{mv:vod_name}" target="_self">{mv:vod_name}</a>
+            </div>
+          <div class="player-tool hidden-xs">
+            <i class="iconfont">&#xe63c;</i>
+            <em>关灯</em></div>
+        </div>
+        <div id="zanpiancms_player">
+          <div class="embed-responsive embed-responsive-16by9" id="cms_play">
+            <iframe className="zanpiancms-play-iframe" src="{mv:play_url_now}" width="100%" height="100%"
+                    frameBorder="0" scrolling="no" allowFullScreen="true"></iframe>
+          </div>
+        </div>
+        <div class="player-shrink hidden-xs hidden-sm icon iconfont" id="player-shrink"></div>
+        <div class="play_barrage hidden-xs">
+          <div class="col-md-10 col-sm-10 col-xs-8 barrage_l"></div>
+        </div>
+        <div class="player_bottom">
+          <div class="col-md-8 col-sm-8 col-xs-12 p-0">
+            <div class="details-tool" id="zanpian-score">
+              <div class="vod-sect user-bt">
+                <a href="javascript:;" class="mac_ulog" data-type="2" data-mid="{mv:type_id}" data-id="{mv:vod_id}">
+                  <i class="iconfont"></i>收藏</a>
+                <div class="sect-show">
+                  <a rel="nofollow" id="yeslove" class="cancel active b-r" href="javascript:void(0);" data-type="love" data-id="{mv:type_id}" data-cid="{mv:vod_id}" style="display: none;">
+                    <i class="iconfont"></i>已收</a></div>
+              </div>
+              <div class="vod-rss user-bt">
+                <a rel="nofollow" class="rss-btn mac_ulog" href="javascript:void(0)" data-type="2" data-mid="{mv:type_id}" data-id="{mv:vod_id}">
+                  <i class="iconfont"></i>订阅</a>
+                <div class="sect-show">
+                  <a rel="nofollow" id="yesremind" class="sect-show cancel active b-l b-r" href="javascript:void(0);" data-type="remind" data-id="{mv:type_id}" data-cid="{mv:vod_id}" style="display: none;">
+                    <i class="iconfont"></i>已订</a></div>
+              </div>
+              <div id="updown">
+                <a class="digg_link hidden-xs" data-id="{mv:vod_id}" data-mid="{mv:type_id}" data-type="up" href="javascript:;">
+                  <i class="iconfont hidden-xs hidden-sm">&#xe607;</i>顶
+                  <em class="digg_num">{mv:vod_up}</em></a>
+                <a class="digg_link hidden-xs" data-id="{mv:vod_id}" data-mid="{mv:type_id}" data-type="down" href="javascript:;">
+                  <i class="iconfont hidden-xs hidden-sm">&#xe606;</i>踩
+                  <em class="digg_num">{mv:vod_down}</em></a>
+              </div>
+              <a rel="nofollow" class="b-l b-r hidden-xs" id="qrcode" data-toggle="popover" data-trigger="hover" data-placement="top" data-container="body" data-title="手机浏览请扫瞄二维码" href="javascript:void(0);" data-original-title="" title="">
+                <i class="iconfont hidden-sm"></i>手机</a></div>
+          </div>
+          <div class="col-md-4 col-sm-4 col-xs-12 p-0 prevnext hidden-xs">
+            {mv:pre_link}
+            {mv:next_link}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3 col-sm-12 col-xs-12  player_right pg-0">
+        <div class="details-play-title">
+          <ul class="nav nav-tabs">
+            <li class="dropdown mplayer active">
+              <a href="#" id="myTabDrop2" class="gico" data-toggle="dropdown">
+                <span class="name">{mv:current_from}</span>
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop2">
+                {mv:play_from1}
+              </ul>
+            </li>
+            <li class="title">选择路线</li>
+          </ul>
+        </div>
+        <div class="player_playlist">
+          {mv:play_url}
+        </div>
+      </div>
+      <div class="player-open"></div>
+    </div>
+
+    <div class="col-md-9 col-sm-12 box-main-content" style="position:static">
+      <div class="layout-box clearfix details-story">
+        <div class="box-title">
+          <h3 class="m-0">《{mv:vod_name}》剧情简介</h3></div>
+        <div class="item">
+          <div class="details-content">
+            {mv:vod_content}
+          </div>
+        </div>
+      </div>
+      <!--视频同主演同类型开始-->
+      <div class="layout-box clearfix">
+        <div class="box-title">
+          <h3 class="m-0">类似推荐</h3>
+        </div>
+        <div class="item">
+          <ul class="clearfix" id="content">
+            {mv:recommend}
+          </ul>
+        </div>
+      </div>
+      <!--视频同主演同类型结束-->
+    </div>
+    <div class="col-md-3 col-sm-12 box-main-side hidden-sm hidden-xs">
+      <div class="layout-box clearfix">
+        <div class="box-title " style="padding:0px 0px 10px 0">
+          <h3 class="m-0">
+            <i class="icon iconfont text-color"></i>热门视频</h3></div>
+        <div class="box-video-text-list">
+          <div class="col-md-6 col-sm-12 col-xs-12 p-0">
+            {mv:top_first}
+            <ul class="clearfix mg-0">
+              {mv:top_list}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
