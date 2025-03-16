@@ -1,0 +1,39 @@
+var feizhu = {
+	'notice': {
+		'load': function() {
+			var today = new Date();
+			var deday = today.getFullYear() + '' + (today.getMonth()+1) + '' + today.getDate();
+			var adnotice = feizhu.notice.get('notice');
+			if(adnotice!=deday) {
+				$('body').append('<div class="notice-bg"></div>');
+				$('.notice-bg,.notice').fadeIn();
+			}
+			$('body').on('click', '.notice-close', function() {
+				feizhu.notice.set('notice',deday,1);
+				$('.notice-bg,.notice').remove();
+			  });
+		},
+		'set': function(name, value, days) {
+			var exp = new Date();
+			exp.setTime(exp.getTime() + days * 24 * 60 * 60 * 1000);
+			var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'));
+			document.cookie = name + '=' + escape(value) + ';path=/;expires=' + exp.toUTCString();
+		},
+		'get': function(name) {
+			var arr = document.cookie.match(new RegExp('(^| )' + name + '=([^;]*)(;|$)'));
+			if (arr != null) return unescape(arr[2]);
+		},
+		'del': function(name, tips) {
+			var exp = new Date();
+			exp.setTime(exp.getTime() - 1);
+			var cval = this.get(name);
+			if (cval != null) {
+				document.cookie = name + "=" + encodeURIComponent(cval) + ";path=/;expires=" + exp.toUTCString();
+			}
+		}
+
+	}
+};
+$(document).ready(function() {
+	feizhu.notice.load();
+});
