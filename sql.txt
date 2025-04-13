@@ -1,0 +1,3 @@
+INSERT INTO mac_vod (vod_id,type_id,vod_name,vod_tag,vod_class,vod_pic,vod_blurb,vod_remarks,vod_area,vod_play_url)  VALUES ([系统时间戳][任务ID],1,'[标签:title]','[标签:tag]','[标签:tag]','[标签:img]','[标签:content]','[标签:remarks]','h','[标签:chapter]')
+
+INSERT INTO mac_vod (vod_id,type_id,vod_name,vod_tag,vod_class,vod_pic,vod_blurb,vod_remarks,vod_area,vod_play_url)  VALUES ([系统时间戳][任务ID],1,'[标签:title]','[标签:tag]','[标签:tag]','[标签:img]','[标签:content]','[标签:remarks]','h','[标签:chapter]')
